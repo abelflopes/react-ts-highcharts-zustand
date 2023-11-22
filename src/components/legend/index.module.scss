@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+}
+
+.success,
+.warning,
+.danger,
+.reference-area {
+  --height: 13px;
+
+  .icon {
+    background-color: var(--color);
+    height: var(--height);
+    border-radius: 2px;
+  }
+}
+
+.success {
+  --color: var(--color-success);
+}
+
+.warning {
+  --color: var(--color-warning);
+}
+
+.danger {
+  --color: var(--color-error);
+}
+
+.reference-area {
+  --color: var(--color-info-light);
+}
+
+.main,
+.reference {
+  .icon {
+    position: relative;
+    border-top: var(--border) calc(var(--height) / 2) var(--color);
+    border-bottom: var(--border) calc(var(--height) / 2) var(--color);
+  }
+}
+
+.main {
+  --height: 3px;
+  --color: var(--color-neutral-0);
+  --border: solid;
+}
+
+.reference {
+  --height: 2px;
+  --color: var(--color-info);
+  --border: dashed;
+}

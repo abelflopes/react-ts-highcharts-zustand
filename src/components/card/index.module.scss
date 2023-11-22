@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.root {
+  background-color: var(--color-neutral-5);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacing-l);
+  border-radius: var(--border-radius);
+
+  @media (width < $bp) {
+    padding: var(--spacing-s);
+  }
+}
